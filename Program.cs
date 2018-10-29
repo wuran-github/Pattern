@@ -6,7 +6,10 @@ namespace myPattern
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            ITestMain main;
+
+            main=new Pattern.Strategy.TestMain();
+            main.Begin();
         }
     }
 }
