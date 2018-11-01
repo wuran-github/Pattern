@@ -4,9 +4,12 @@ namespace Pattern.Observer
 {
     public interface ISubject
     {
-        bool RegisterObserver(IObserver ob);
-        bool RemoveObserver(IObserver ob);
+        void RegisterObserver(IObserver ob);
+        void RemoveObserver(IObserver ob);
 
-        void NotifyObserver();
+        void NotifyObserver(Object arg);
+
+        //用来判断是否Update，有必要
+        bool IsChanged();
     }
 }

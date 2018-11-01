@@ -8,8 +8,14 @@ namespace myPattern
         {
             ITestMain main;
 
+
+            //strategy pattern
             main=new Pattern.Strategy.TestMain();
+
+            //Observer pattern
+            main=new Pattern.Observer.TestMain();
             main.Begin();
+            
         }
     }
 }
