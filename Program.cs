@@ -14,6 +14,9 @@ namespace myPattern
 
             //Observer pattern
             main=new Pattern.Observer.TestMain();
+
+            //Decorator Pattern
+            main=new Pattern.Decorator.TestMain();
             main.Begin();
             
         }
