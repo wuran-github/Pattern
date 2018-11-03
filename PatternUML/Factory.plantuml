@@ -1,0 +1,7 @@
+@startuml
+title Factory class diagram
+class Quest
+class Factory
+Quest -> Factory
+
+@enduml

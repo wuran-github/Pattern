@@ -10,13 +10,16 @@ namespace myPattern
 
 
             //strategy pattern
-            main=new Pattern.Strategy.TestMain();
+            // main=new Pattern.Strategy.TestMain();
 
-            //Observer pattern
-            main=new Pattern.Observer.TestMain();
+            // //Observer pattern
+            // main=new Pattern.Observer.TestMain();
 
-            //Decorator Pattern
-            main=new Pattern.Decorator.TestMain();
+            // //Decorator Pattern
+            // main=new Pattern.Decorator.TestMain();
+
+            // Factory Pattren
+            main=new Pattern.Factory.TestMain();
             main.Begin();
             
         }
