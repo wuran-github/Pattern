@@ -1,7 +1,51 @@
 @startuml
 title Factory class diagram
-class Quest
-class Factory
-Quest -> Factory
+interface IQuest
+interface IQuestFactory
 
+abstract class Quest
+class KillGoblin
+class DeliverGoods
+class SearchRing
+
+class KillGoblinFactory
+class DeliverGoodsFactory
+class SearchRingFactory
+
+Quest..|>IQuest
+KillGoblin--|> Quest
+DeliverGoods --|> Quest
+SearchRing --|> Quest
+
+KillGoblinFactory ..|> IQuestFactory
+DeliverGoodsFactory ..|> IQuestFactory
+SearchRingFactory ..|> IQuestFactory
+
+KillGoblinFactory ..> KillGoblin
+DeliverGoodsFactory ..> DeliverGoods
+SearchRingFactory ..> SearchRing
+
+
+
+@enduml
+
+@startuml
+title Static Factory Class Diagram
+interface IQuest
+interface IQuestFactory
+
+abstract class Quest
+class KillGoblin
+class DeliverGoods
+
+class StaticQuestFactory
+
+Quest ..|> IQuest
+StaticQuestFactory ..|> IQuestFactory
+
+KillGoblin --|> Quest
+DeliverGoods --|> Quest
+
+StaticQuestFactory ..> KillGoblin
+StaticQuestFactory ..> DeliverGoods
 @enduml
