@@ -1,5 +1,4 @@
 using System;
-using Pattern.Factory;
 namespace Pattern.AbstractFactory
 {
     public class KillGoblin:Quest

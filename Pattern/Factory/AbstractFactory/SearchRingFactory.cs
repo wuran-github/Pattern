@@ -1,12 +1,13 @@
 using System;
-using Pattern.Factory;
 namespace Pattern.AbstractFactory
 {
     public class SearchRingFactory : IQuestFactory
     {
-        public IQuest GetQuestInstance()
+        public IQuest GetQuestInstance(IEquipmentFactory equipmentFactory)
         {
-            return new SearchRing();
+            return new SearchRing(){
+                EquipmentFactory=equipmentFactory,
+            };
         }
     }
 }

@@ -1,5 +1,6 @@
 using System;
 using myPattern;
+using Pattern;
 namespace Pattern.Factory
 {
     public class TestMain : ITestMain
@@ -8,8 +9,8 @@ namespace Pattern.Factory
         {
 
             //StaticFactory();
-            Factory();
-            AbstractFactory();
+            // Factory();
+            UseAbstractFactory();
 
 
         }
@@ -40,8 +41,23 @@ namespace Pattern.Factory
             c.Print();
         }
 
-        void AbstractFactory()
+        void UseAbstractFactory()
         {
+            AbstractFactory.Charactor c = new AbstractFactory.Charactor();
+            AbstractFactory.IEquipmentFactory changGe=new AbstractFactory.ChangGeFactory();
+            AbstractFactory.IEquipmentFactory chunYang=new AbstractFactory.ChunYangFactory();
+
+            AbstractFactory.IQuestFactory questFactory=new AbstractFactory.KillGoblinFactory();
+            c.Quest=questFactory.GetQuestInstance(chunYang);
+            c.Print();
+            
+            questFactory=new AbstractFactory.DeliverGoodsFactory();
+            c.Quest=questFactory.GetQuestInstance(changGe);
+            c.Print();
+
+             questFactory=new AbstractFactory.SearchRingFactory();
+            c.Quest=questFactory.GetQuestInstance(changGe);
+            c.Print();
 
         }
     }

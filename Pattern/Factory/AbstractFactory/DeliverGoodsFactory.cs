@@ -1,12 +1,13 @@
 using System;
-using Pattern.Factory;
 namespace Pattern.AbstractFactory
 {
     public class DeliverGoodsFactory : IQuestFactory
     {
-        public IQuest GetQuestInstance()
+        public IQuest GetQuestInstance(IEquipmentFactory equipmentFactory)
         {
-            return new DeliverGoods();
+            return new DeliverGoods(){
+                EquipmentFactory=equipmentFactory,
+            };
         }
     }
 }

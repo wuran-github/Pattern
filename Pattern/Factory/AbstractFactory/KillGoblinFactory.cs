@@ -1,12 +1,13 @@
 using System;
-using Pattern.Factory;
 namespace Pattern.AbstractFactory
 {
     public class KillGoblinFactory : IQuestFactory
     {
-        public IQuest GetQuestInstance()
+        public IQuest GetQuestInstance(IEquipmentFactory equipmentFactory)
         {
-            return new KillGoblin();
+            return new KillGoblin(){
+                EquipmentFactory=equipmentFactory,
+            };
         }
     }
 }
