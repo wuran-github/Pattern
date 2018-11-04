@@ -19,7 +19,10 @@ namespace myPattern
             // main=new Pattern.Decorator.TestMain();
 
             // Factory Pattren
-            main=new Pattern.Factory.TestMain();
+            // main=new Pattern.Factory.TestMain();
+
+            //Command Pattern
+            main=new Pattern.Command.TestMain();
             main.Begin();
             
         }
